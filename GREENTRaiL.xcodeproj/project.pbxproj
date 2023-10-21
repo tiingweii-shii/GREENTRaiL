@@ -40,6 +40,7 @@
 		5CC4769B2AE45F8E00FF2510 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4769A2AE45F8E00FF2510 /* Secrets.swift */; };
 		5CC4769D2AE4605C00FF2510 /* WidgetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4769C2AE4605C00FF2510 /* WidgetInfo.swift */; };
 		5CC4769F2AE460DD00FF2510 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4769E2AE460DD00FF2510 /* Errors.swift */; };
+		5CC476A12AE4698C00FF2510 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC476A02AE4698C00FF2510 /* HomeView.swift */; };
 		D824AF852AE430540042148A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824AF842AE430540042148A /* LogInView.swift */; };
 		D824AF892AE4387A0042148A /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = D824AF882AE4387A0042148A /* Fonts */; };
 		D8C07DDC2AE417AB0069EF0C /* GREENTRaiLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C07DDB2AE417AB0069EF0C /* GREENTRaiLApp.swift */; };
@@ -55,6 +56,7 @@
 		5CC4769A2AE45F8E00FF2510 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		5CC4769C2AE4605C00FF2510 /* WidgetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetInfo.swift; sourceTree = "<group>"; };
 		5CC4769E2AE460DD00FF2510 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		5CC476A02AE4698C00FF2510 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D824AF842AE430540042148A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		D824AF882AE4387A0042148A /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		D8C07DD82AE417AB0069EF0C /* GREENTRaiL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREENTRaiL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 		D8C07DDA2AE417AB0069EF0C /* GREENTRaiL */ = {
 			isa = PBXGroup;
 			children = (
+				5CC476A02AE4698C00FF2510 /* HomeView.swift */,
 				5CC476962AE45BF500FF2510 /* GoogleService-Info.plist */,
 				D824AF882AE4387A0042148A /* Fonts */,
 				08152A012AE419720039AE8F /* Info.plist */,
@@ -255,6 +258,7 @@
 				D824AF852AE430540042148A /* LogInView.swift in Sources */,
 				D8C07DDE2AE417AB0069EF0C /* ContentView.swift in Sources */,
 				D8C07DDC2AE417AB0069EF0C /* GREENTRaiLApp.swift in Sources */,
+				5CC476A12AE4698C00FF2510 /* HomeView.swift in Sources */,
 				5CC4769D2AE4605C00FF2510 /* WidgetInfo.swift in Sources */,
 				5CC4769F2AE460DD00FF2510 /* Errors.swift in Sources */,
 			);
