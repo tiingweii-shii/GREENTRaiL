@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HomeView: View {
+struct MapHomeView: View {
     var body: some View {
         
         ZStack{
@@ -96,8 +96,8 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct MapHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        MapHomeView()
     }
 }

@@ -25,6 +25,7 @@ struct LogInView: View {
                                 ContentView.userId = _userId
                                 ContentView.resource = _resource
                                 loggedIn = true
+                                print(loggedIn)
                             }
                         }
                     }, label: {
@@ -63,7 +64,7 @@ struct LogInView: View {
                 
                 
                 NavigationLink(
-                                destination: ContentView(), // ContentView is the target destination
+                                destination: ContentView(), // MapHomeView is the target destination
                                 isActive: $loggedIn
                             ) {
                                 EmptyView() // This view will remain empty
