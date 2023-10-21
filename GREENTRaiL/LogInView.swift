@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LogInView: View {
+    
+    var widgetHandler = WidgetHandler()
+    
     var body: some View {
         ZStack {
             Image("Vector 3")
@@ -15,7 +18,14 @@ struct LogInView: View {
                 Image("home logo")
                 .padding([.top], 200)
                 Button(action: {
-                                    
+                        widgetHandler.displayWidget { success, _userId, _resource  in
+                            if success {
+                                ContentView.userId = _userId
+                                ContentView.resource = _resource
+                                print(ContentView.userId)
+                                print(ContentView.resource)
+                            }
+                        }
                       }, label: {
                           Text("LOGIN")
                               .foregroundColor(Color.white)
