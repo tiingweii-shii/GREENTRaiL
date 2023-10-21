@@ -23,6 +23,7 @@ struct LogInView: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(red: 0.74, green: 0.39, blue: 0.22))
                     Image("APP BRAND")
+                        .offset(CGSize(width: 30, height: -3))
                 }
                 .padding([.top], 200)
 
