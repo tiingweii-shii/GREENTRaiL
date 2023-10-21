@@ -11,8 +11,27 @@ struct LogInView: View {
     var body: some View {
         ZStack {
             Image("Vector 3")
-            Image("home logo")
+            VStack {
+                Image("home logo")
+                .padding([.top], 200)
+                
+                ZStack {
+                    Text("greentr        l ")
+                        .font(
+                            Font.custom("Fredoka-SemiBold", size: 20)
+                        )
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color(red: 0.74, green: 0.39, blue: 0.22))
+                    Image("APP BRAND")
+                }
+                .padding([.top], 200)
 
+                Text("let’s explore together! ")
+                  .font(
+                    Font.custom("Fredoka-Light", size: 13)
+                  )
+                  .foregroundColor(Color(red: 0.74, green: 0.39, blue: 0.22))
+            }
         }
         .padding()
         .frame(width: 390, height: 844)
