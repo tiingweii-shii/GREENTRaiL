@@ -35,7 +35,6 @@
 		5CC4768B2AE41D1000FF2510 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5CC4768A2AE41D1000FF2510 /* FirebaseRemoteConfigSwift */; };
 		5CC4768D2AE41D1000FF2510 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5CC4768C2AE41D1000FF2510 /* FirebaseStorage */; };
 		5CC4768F2AE41D1000FF2510 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5CC4768E2AE41D1000FF2510 /* FirebaseStorageCombine-Community */; };
-		5CC476972AE45BF500FF2510 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC476962AE45BF500FF2510 /* GoogleService-Info.plist */; };
 		5CC476992AE45F6800FF2510 /* WidgetHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC476982AE45F6800FF2510 /* WidgetHandler.swift */; };
 		5CC4769B2AE45F8E00FF2510 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4769A2AE45F8E00FF2510 /* Secrets.swift */; };
 		5CC4769D2AE4605C00FF2510 /* WidgetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4769C2AE4605C00FF2510 /* WidgetInfo.swift */; };
@@ -51,7 +50,7 @@
 /* Begin PBXFileReference section */
 		08152A002AE419640039AE8F /* GREENTRaiL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GREENTRaiL.entitlements; sourceTree = "<group>"; };
 		08152A012AE419720039AE8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		5CC476962AE45BF500FF2510 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		082BA4602AE4736B007DDE49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5CC476982AE45F6800FF2510 /* WidgetHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHandler.swift; sourceTree = "<group>"; };
 		5CC4769A2AE45F8E00FF2510 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		5CC4769C2AE4605C00FF2510 /* WidgetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetInfo.swift; sourceTree = "<group>"; };
@@ -123,11 +122,11 @@
 		D8C07DDA2AE417AB0069EF0C /* GREENTRaiL */ = {
 			isa = PBXGroup;
 			children = (
-				5CC476A02AE4698C00FF2510 /* HomeView.swift */,
-				5CC476962AE45BF500FF2510 /* GoogleService-Info.plist */,
 				D824AF882AE4387A0042148A /* Fonts */,
 				08152A012AE419720039AE8F /* Info.plist */,
+				082BA4602AE4736B007DDE49 /* GoogleService-Info.plist */,
 				08152A002AE419640039AE8F /* GREENTRaiL.entitlements */,
+				5CC476A02AE4698C00FF2510 /* HomeView.swift */,
 				D8C07DDB2AE417AB0069EF0C /* GREENTRaiLApp.swift */,
 				D8C07DDD2AE417AB0069EF0C /* ContentView.swift */,
 				D824AF842AE430540042148A /* LogInView.swift */,
@@ -242,7 +241,6 @@
 			files = (
 				D8C07DE32AE417B10069EF0C /* Preview Assets.xcassets in Resources */,
 				D824AF892AE4387A0042148A /* Fonts in Resources */,
-				5CC476972AE45BF500FF2510 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
