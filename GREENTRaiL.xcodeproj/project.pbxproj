@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081529FF2AE419320039AE8F /* TerraiOS in Frameworks */ = {isa = PBXBuildFile; productRef = 081529FE2AE419320039AE8F /* TerraiOS */; };
 		D8C07DDC2AE417AB0069EF0C /* GREENTRaiLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C07DDB2AE417AB0069EF0C /* GREENTRaiLApp.swift */; };
 		D8C07DDE2AE417AB0069EF0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C07DDD2AE417AB0069EF0C /* ContentView.swift */; };
 		D8C07DE02AE417B10069EF0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C07DDF2AE417B10069EF0C /* Assets.xcassets */; };
@@ -14,6 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08152A002AE419640039AE8F /* GREENTRaiL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GREENTRaiL.entitlements; sourceTree = "<group>"; };
+		08152A012AE419720039AE8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D8C07DD82AE417AB0069EF0C /* GREENTRaiL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREENTRaiL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C07DDB2AE417AB0069EF0C /* GREENTRaiLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GREENTRaiLApp.swift; sourceTree = "<group>"; };
 		D8C07DDD2AE417AB0069EF0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081529FF2AE419320039AE8F /* TerraiOS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +55,8 @@
 		D8C07DDA2AE417AB0069EF0C /* GREENTRaiL */ = {
 			isa = PBXGroup;
 			children = (
+				08152A012AE419720039AE8F /* Info.plist */,
+				08152A002AE419640039AE8F /* GREENTRaiL.entitlements */,
 				D8C07DDB2AE417AB0069EF0C /* GREENTRaiLApp.swift */,
 				D8C07DDD2AE417AB0069EF0C /* ContentView.swift */,
 				D8C07DDF2AE417B10069EF0C /* Assets.xcassets */,
@@ -83,6 +89,9 @@
 			dependencies = (
 			);
 			name = GREENTRaiL;
+			packageProductDependencies = (
+				081529FE2AE419320039AE8F /* TerraiOS */,
+			);
 			productName = GREENTRaiL;
 			productReference = D8C07DD82AE417AB0069EF0C /* GREENTRaiL.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +120,9 @@
 				Base,
 			);
 			mainGroup = D8C07DCF2AE417AB0069EF0C;
+			packageReferences = (
+				081529FD2AE419320039AE8F /* XCRemoteSwiftPackageReference "TerraiOS" */,
+			);
 			productRefGroup = D8C07DD92AE417AB0069EF0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,11 +281,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GREENTRaiL/GREENTRaiL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GREENTRaiL/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GREENTRaiL/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "May we use your biometric data to recomend trails?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,11 +314,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GREENTRaiL/GREENTRaiL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GREENTRaiL/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GREENTRaiL/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "May we use your biometric data to recomend trails?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -342,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		081529FD2AE419320039AE8F /* XCRemoteSwiftPackageReference "TerraiOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tryterra/TerraiOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		081529FE2AE419320039AE8F /* TerraiOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 081529FD2AE419320039AE8F /* XCRemoteSwiftPackageReference "TerraiOS" */;
+			productName = TerraiOS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D8C07DD02AE417AB0069EF0C /* Project object */;
 }
