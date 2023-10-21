@@ -138,6 +138,7 @@ class WidgetHandler: NSObject, ObservableObject, ASWebAuthenticationPresentation
         let components = URLComponents(url: url, resolvingAgainstBaseURL: true)
         guard let queries = components?.queryItems, queries.filter({$0.name == "reason"}).isEmpty else{
             // print("Auth failed reason \(String(describing: components?.queryItems?.filter({$0.name == "reason"})[safe:0]?.value))")
+            print("Auth failed reason \(String(describing: components?.queryItems?.filter({$0.name == "reason"})[0].value))")
             completion(false, nil, nil)
             return
         }

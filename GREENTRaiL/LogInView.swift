@@ -18,14 +18,15 @@ struct LogInView: View {
                 Image("home logo")
                 .padding([.top], 200)
                 Button(action: {
-                        widgetHandler.displayWidget { success, _userId, _resource  in
+                        /*widgetHandler.displayWidget { success, _userId, _resource  in
                             if success {
                                 ContentView.userId = _userId
                                 ContentView.resource = _resource
-                                print(ContentView.userId)
-                                print(ContentView.resource)
+                                print(ContentView.userId!)
+                                print(ContentView.resource!)
                             }
-                        }
+                        }*/
+                        get_trails()
                       }, label: {
                           Text("LOGIN")
                               .foregroundColor(Color.white)
