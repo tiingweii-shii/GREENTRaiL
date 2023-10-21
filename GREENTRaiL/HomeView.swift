@@ -37,7 +37,7 @@ struct HomeView: View {
                         .cornerRadius(33)
                  
                     VStack(){
-                        HStack(spacing: 50){
+                        HStack(spacing: 40){
                             Button {
                                     
                             } label: {
@@ -47,7 +47,7 @@ struct HomeView: View {
                             Button {
                                     
                             } label: {
-                                Image("bw logo")
+                                Image("Vector 2")
 
                             }
                             Button {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081348A52AE4779300699C84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 081348A42AE4779300699C84 /* GoogleService-Info.plist */; };
+		081348A72AE47E4700699C84 /* GREENTRaiLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081348A62AE47E4700699C84 /* GREENTRaiLModel.swift */; };
 		081529FF2AE419320039AE8F /* TerraiOS in Frameworks */ = {isa = PBXBuildFile; productRef = 081529FE2AE419320039AE8F /* TerraiOS */; };
 		5CC4765B2AE41D0F00FF2510 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5CC4765A2AE41D0F00FF2510 /* FirebaseAnalytics */; };
 		5CC4765D2AE41D0F00FF2510 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 5CC4765C2AE41D0F00FF2510 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		081348A42AE4779300699C84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		081348A62AE47E4700699C84 /* GREENTRaiLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GREENTRaiLModel.swift; sourceTree = "<group>"; };
 		08152A002AE419640039AE8F /* GREENTRaiL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GREENTRaiL.entitlements; sourceTree = "<group>"; };
 		08152A012AE419720039AE8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5CC476982AE45F6800FF2510 /* WidgetHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHandler.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		D8C07DDA2AE417AB0069EF0C /* GREENTRaiL */ = {
 			isa = PBXGroup;
 			children = (
+				081348A42AE4779300699C84 /* GoogleService-Info.plist */,
 				D824AF882AE4387A0042148A /* Fonts */,
 				08152A012AE419720039AE8F /* Info.plist */,
 				08152A002AE419640039AE8F /* GREENTRaiL.entitlements */,
@@ -136,6 +141,7 @@
 				5CC4769A2AE45F8E00FF2510 /* Secrets.swift */,
 				5CC4769C2AE4605C00FF2510 /* WidgetInfo.swift */,
 				5CC4769E2AE460DD00FF2510 /* Errors.swift */,
+				081348A62AE47E4700699C84 /* GREENTRaiLModel.swift */,
 			);
 			path = GREENTRaiL;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 				5CC4769B2AE45F8E00FF2510 /* Secrets.swift in Sources */,
 				D824AF852AE430540042148A /* LogInView.swift in Sources */,
 				D8C07DDE2AE417AB0069EF0C /* ContentView.swift in Sources */,
+				081348A72AE47E4700699C84 /* GREENTRaiLModel.swift in Sources */,
 				D8C07DDC2AE417AB0069EF0C /* GREENTRaiLApp.swift in Sources */,
 				5CC476A12AE4698C00FF2510 /* HomeView.swift in Sources */,
 				5CC4769D2AE4605C00FF2510 /* WidgetInfo.swift in Sources */,
