@@ -14,6 +14,18 @@ struct LogInView: View {
             VStack {
                 Image("home logo")
                 .padding([.top], 200)
+                Button {}
+                                // link to Widget Info Page
+                     label: {
+                        Text("Connect Widget")
+                            .foregroundColor(Color.white)
+                            .font(Font.custom("Fredoka-Light", size: 13))
+                            .frame(width: 290, height: 50)
+                    }.background(
+                        Rectangle()
+                            .fill(Color.black)
+                            .cornerRadius(6.5)
+                    )
                 
                 ZStack {
                     Text("greentr        l ")
@@ -32,7 +44,13 @@ struct LogInView: View {
                     Font.custom("Fredoka-Light", size: 13)
                   )
                   .foregroundColor(Color(red: 0.74, green: 0.39, blue: 0.22))
+                
+                
             }
+          
+            
+
+
         }
         .padding()
         .frame(width: 390, height: 844)
