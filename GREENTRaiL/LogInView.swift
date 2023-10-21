@@ -8,24 +8,36 @@
 import SwiftUI
 
 struct LogInView: View {
+    
+    var widgetHandler = WidgetHandler()
+    
     var body: some View {
         ZStack {
             Image("Vector 3")
             VStack {
                 Image("home logo")
                 .padding([.top], 200)
-                Button {}
-                                // link to Widget Info Page
-                     label: {
-                        Text("Connect Widget")
-                            .foregroundColor(Color.white)
-                            .font(Font.custom("Fredoka-Light", size: 13))
-                            .frame(width: 290, height: 50)
-                    }.background(
-                        Rectangle()
-                            .fill(Color.black)
-                            .cornerRadius(6.5)
-                    )
+                Button(action: {
+                        widgetHandler.displayWidget { success, _userId, _resource  in
+                            if success {
+                                ContentView.userId = _userId
+                                ContentView.resource = _resource
+                                print(ContentView.userId)
+                                print(ContentView.resource)
+                            }
+                        }
+                      }, label: {
+                          Text("LOGIN")
+                              .foregroundColor(Color.white)
+                              .font(Font.custom("Fredoka-Bold", size: 40))
+                              .frame(width: 122, height: 40, alignment: .topLeading)
+                              .background(
+                                  Rectangle()
+                                      .fill(Color(red: 0.74, green: 0.39, blue: 0.22))
+                                      .cornerRadius(50)
+                                      .frame(width: 305, height: 72)
+                              )
+                      }).padding([.top], 15)
                 
                 ZStack {
                     Text("greentr        l ")

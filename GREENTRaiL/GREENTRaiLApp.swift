@@ -23,7 +23,7 @@ struct GREENTRaiLApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LogInView()
         }
     }
 }
