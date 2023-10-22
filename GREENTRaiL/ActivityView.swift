@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ActivityView: View {
+    
+    @State private var label_string = "Get Activity"
+    @State private var route_label = "Select Route"
+    
     var body: some View {
         
         ZStack{
@@ -24,30 +28,50 @@ struct ActivityView: View {
             VStack{
                 
                 Button {
+                        route_label = "Coyote Hills"
+                    } label: {
+                        Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 350, height: 98)
+                        .background(Color(red: 0.93, green: 0.6, blue: 0.45))
+                        .cornerRadius(56)
+                        .overlay(Text(route_label)
+                            .font(
+                            Font.custom("Fredoka", size: 32)
+                            .weight(.bold)
+                            )
+                            .foregroundColor(.white))
+                        
+                        
+                    }
+                Button {
+                    
+                    label_string = "Loading..."
+                    
+                    var end = Date()
+                    
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "yyyy/MM/dd HH:mm"
+                    let start = formatter.date(from: "2023/10/11 22:31")
+                    requestActivity(startDate: start!, endDate: end, resource:ContentView.resource!) { w in
+                        
+                        let originalString = w.startTime
+                        let startIndex = originalString.index(originalString.startIndex, offsetBy: 0) // Index where the slice starts
+                        let endIndex = originalString.index(originalString.startIndex, offsetBy: 10) // Index where the slice ends
 
-                    } label: {
-                        Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 350, height: 98)
-                        .background(Color(red: 0.93, green: 0.6, blue: 0.45))
-                        .cornerRadius(56)
-                        .overlay(Text("Select Route")
-                            .font(
-                            Font.custom("Fredoka", size: 32)
-                            .weight(.bold)
-                            )
-                            .foregroundColor(.white))
+                        let slicedString = originalString[startIndex..<endIndex]
+                        label_string = String(slicedString)
                         
-                        
+                        print(w)
                     }
-                Button {
+                    
                     } label: {
                         Rectangle()
                         .foregroundColor(.clear)
                         .frame(width: 350, height: 98)
                         .background(Color(red: 0.93, green: 0.6, blue: 0.45))
                         .cornerRadius(56)
-                        .overlay(Text("Get Activity")
+                        .overlay(Text(label_string)
                             .font(
                             Font.custom("Fredoka", size: 32)
                             .weight(.bold)
@@ -55,6 +79,10 @@ struct ActivityView: View {
                             .foregroundColor(.white))
                     }
                 Button {
+                    
+                    label_string = "Get Activity"
+                    route_label = "Select Route"
+                    
                     } label: {
                         Rectangle()
                         .foregroundColor(.clear)
