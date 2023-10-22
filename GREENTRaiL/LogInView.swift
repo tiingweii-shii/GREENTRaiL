@@ -64,7 +64,7 @@ struct LogInView: View {
                 
                 
                 NavigationLink(
-                                destination: ContentView(), // MapHomeView is the target destination
+                                destination: MainView(), // MapHomeView is the target destination
                                 isActive: $loggedIn
                             ) {
                                 EmptyView() // This view will remain empty

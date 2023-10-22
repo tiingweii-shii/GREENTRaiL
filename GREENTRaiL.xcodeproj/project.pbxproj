@@ -44,6 +44,8 @@
 		5CC4769F2AE460DD00FF2510 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4769E2AE460DD00FF2510 /* Errors.swift */; };
 		5CC476A12AE4698C00FF2510 /* MapHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC476A02AE4698C00FF2510 /* MapHomeView.swift */; };
 		D81C10922AE48D6A006461DA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C10912AE48D6A006461DA /* MainView.swift */; };
+		D81C10952AE49E1E006461DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D81C10942AE49E1E006461DA /* GoogleService-Info.plist */; };
+		D81C10972AE49F13006461DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81C10962AE49F13006461DA /* ProfileView.swift */; };
 		D824AF852AE430540042148A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824AF842AE430540042148A /* LogInView.swift */; };
 		D824AF892AE4387A0042148A /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = D824AF882AE4387A0042148A /* Fonts */; };
 		D8C07DDC2AE417AB0069EF0C /* GREENTRaiLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C07DDB2AE417AB0069EF0C /* GREENTRaiLApp.swift */; };
@@ -56,13 +58,14 @@
 		08152A002AE419640039AE8F /* GREENTRaiL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GREENTRaiL.entitlements; sourceTree = "<group>"; };
 		08152A012AE419720039AE8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		08F5C4772AE48B18006BDECE /* TinyMapSlideUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyMapSlideUpView.swift; sourceTree = "<group>"; };
-		5C3052F12AE49D1200998BCB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5CC476982AE45F6800FF2510 /* WidgetHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHandler.swift; sourceTree = "<group>"; };
 		5CC4769A2AE45F8E00FF2510 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		5CC4769C2AE4605C00FF2510 /* WidgetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetInfo.swift; sourceTree = "<group>"; };
 		5CC4769E2AE460DD00FF2510 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		5CC476A02AE4698C00FF2510 /* MapHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapHomeView.swift; sourceTree = "<group>"; };
 		D81C10912AE48D6A006461DA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D81C10942AE49E1E006461DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D81C10962AE49F13006461DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D824AF842AE430540042148A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		D824AF882AE4387A0042148A /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		D8C07DD82AE417AB0069EF0C /* GREENTRaiL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREENTRaiL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,8 +135,10 @@
 				5C3052F12AE49D1200998BCB /* GoogleService-Info.plist */,
 				D824AF882AE4387A0042148A /* Fonts */,
 				08152A012AE419720039AE8F /* Info.plist */,
+				D81C10942AE49E1E006461DA /* GoogleService-Info.plist */,
 				08152A002AE419640039AE8F /* GREENTRaiL.entitlements */,
 				5CC476A02AE4698C00FF2510 /* MapHomeView.swift */,
+				D81C10962AE49F13006461DA /* ProfileView.swift */,
 				D8C07DDB2AE417AB0069EF0C /* GREENTRaiLApp.swift */,
 				D8C07DDD2AE417AB0069EF0C /* ContentView.swift */,
 				D81C10912AE48D6A006461DA /* MainView.swift */,
@@ -251,7 +256,7 @@
 			files = (
 				D8C07DE32AE417B10069EF0C /* Preview Assets.xcassets in Resources */,
 				D824AF892AE4387A0042148A /* Fonts in Resources */,
-				5C3052F22AE49D1200998BCB /* GoogleService-Info.plist in Resources */,
+				D81C10952AE49E1E006461DA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +271,7 @@
 				5CC4769B2AE45F8E00FF2510 /* Secrets.swift in Sources */,
 				D824AF852AE430540042148A /* LogInView.swift in Sources */,
 				D81C10922AE48D6A006461DA /* MainView.swift in Sources */,
+				D81C10972AE49F13006461DA /* ProfileView.swift in Sources */,
 				D8C07DDE2AE417AB0069EF0C /* ContentView.swift in Sources */,
 				081348A72AE47E4700699C84 /* GREENTRaiLModel.swift in Sources */,
 				D8C07DDC2AE417AB0069EF0C /* GREENTRaiLApp.swift in Sources */,
