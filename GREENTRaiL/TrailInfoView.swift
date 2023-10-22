@@ -14,44 +14,88 @@ struct TrailInfoView: View {
             
             Image("Vector 12")
                 .offset(CGSize(width:20, height: 153))
-            VStack{
+            ZStack{
                 
-                Button {
-
-                    } label: {
-                        Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 350, height: 98)
-                        .background(Color(red: 1, green: 0.71, blue: 0.07))
-                        .cornerRadius(56)
-                        .overlay(Text("Recommend Route")
-                            .font(
-                            Font.custom("Fredoka", size: 32)
-                            .weight(.bold)
-                            )
-                            .foregroundColor(.white))
-                    }
-                
-              
-                NavigationLink(destination: TinyMapSlideUpView(), label: {
-                    
-                
-                    Text("Seach Map")
-                })
+                Rectangle()
                 .foregroundColor(.clear)
-                .frame(width: 350, height: 98)
-                .background(Color(red: 0.93, green: 0.6, blue: 0.45))
-                .cornerRadius(56)
-                .overlay(Text("Search Map")
-                    .font(
+                .frame(width: 390, height: 364)
+                .background(Color(red: 1, green: 0.71, blue: 0.07))
+
+                .cornerRadius(33)
+                VStack(alignment: .leading, spacing: 16){
+                    HStack{
+                        Text("Route: ")
+                        .font(
                         Font.custom("Fredoka", size: 32)
-                            .weight(.bold)
-                    )
-                        .foregroundColor(.white))
+                        .weight(.bold)
+                        )
+                        .foregroundColor(.white)
+                        
+                        Text("Royal Arch Trail")
+                        .font(
+                        Font.custom("Fredoka", size: 32)
+                        .weight(.medium)
+                        )
+                        .foregroundColor(.white)
+                    }
                     
+                    HStack{
+                        Text("difficulty: ")
+                        .font(Font.custom("Fredoka", size: 20))
+                        .foregroundColor(.white)
+                        Text("hard")
+                          .font(
+                            Font.custom("Fredoka", size: 20)
+                              .weight(.semibold)
+                          )
+                          .foregroundColor(Color(red: 0.74, green: 0.39, blue: 0.22))
+                    }
+                    HStack{
+                        Text("time: ")
+                        .font(Font.custom("Fredoka", size: 20))
+                        .foregroundColor(.white)
+                        
+                        Text("3:20:01")
+                          .font(
+                            Font.custom("Fredoka", size: 20)
+                              .weight(.semibold)
+                          )
+                          .foregroundColor(Color(red: 0.13, green: 0.32, blue: 0.41))
+                    }
+                    Text("Recommendations: ")
+                      .font(
+                        Font.custom("Fredoka", size: 32)
+                          .weight(.bold)
+                      )
+                      .foregroundColor(.white)
+                    
+                    HStack{
+                        Text("trail average heart rate:")
+                          .font(Font.custom("Fredoka", size: 20))
+                          .foregroundColor(.white)
+                        Text("90 BPM")
+                          .font(
+                            Font.custom("Fredoka", size: 20)
+                              .weight(.semibold)
+                          )
+                          .foregroundColor(Color(red: 0.13, green: 0.32, blue: 0.41))
+                    }
+                    
+                    HStack{
+                        Text("your average heart rate:")
+                          .font(Font.custom("Fredoka", size: 20))
+                          .foregroundColor(.white)
+                        Text("100 BPM")
+                          .font(
+                            Font.custom("Fredoka", size: 20)
+                              .weight(.semibold)
+                          )
+                          .foregroundColor(Color(red: 0.74, green: 0.39, blue: 0.22))
+                    }
+                }
                 
             }
-            .offset(CGSize(width:0, height: 200))
+            .offset(CGSize(width:0, height: 140))
           
 
             VStack{
