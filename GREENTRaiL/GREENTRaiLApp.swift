@@ -21,6 +21,7 @@ struct user: Codable {
     var location: [Float] = [1]
 }
 
+
 struct trails: Codable {
     var active: Bool = false
     var difficulty: Int = 3
@@ -161,6 +162,7 @@ func getUsers(name: String, completion: @escaping (user) -> Void) {
                     myData = try JSONDecoder().decode(user.self, from: jsonData)
                     print(myData)
                     // Access other fields here
+                    completion(myData)
                 } catch {
                     print("Error decoding data: \(error)")
                 }
@@ -168,7 +170,23 @@ func getUsers(name: String, completion: @escaping (user) -> Void) {
                 print("Data is not a valid JSON object")
             }
         } else {
-            print("Document does not exist")
+            
+            var h1 = user(age: 23, gender: "female", height: 5.5, weight:155.6, firstName: "Rey", lastName: "Shields", aerobicfitnessrating: 4, hikes: ["1", "2"], location: [34, 54] )
+            do {
+                let data = try JSONEncoder().encode(h1)
+                if let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] {
+                    // You now have your struct data as a dictionary
+                    print(dictionary)
+                    
+                    // Proceed to write this dictionary to Firestore
+                    collectionRef.setData(dictionary)
+                    completion(h1)
+                }
+                
+            } catch {
+                print("Error converting struct to dictionary: \(error)")
+            }
+            
         }
     }
 }
@@ -242,12 +260,12 @@ func update_difficulty(trail: String){
         for hike in hikes {
             print(hike)
             // Access other fields here
-            sum += hike.bpm.max()!
+            sum += hike.bpm.max()!-45
             num += 1
         }
         
         let docRef = Firestore.firestore().collection("trails").document(trail)
-        docRef.updateData(["difficulty": (sum/max(num, 1))])
+        docRef.updateData(["difficulty": (min(10, sum/max(num, 1)/10))])
     }
 }
 

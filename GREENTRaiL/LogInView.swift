@@ -24,10 +24,21 @@ struct LogInView: View {
                             if success {
                                 ContentView.userId = _userId
                                 ContentView.resource = _resource
+                                
+                                getUsers(name:ContentView.userId!) { user in
+                                    print(user)
+                                }
+                                
                                 loggedIn = true
                                 print(loggedIn)
                             }
                         }
+                        
+                        /*getTrails() { hikes in
+                            for hike in hikes {
+                                print(hike)
+                            }
+                        }*/
                     }, label: {
                         Text("LOGIN")
                             .foregroundColor(Color.white)
