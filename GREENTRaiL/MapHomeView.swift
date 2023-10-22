@@ -30,23 +30,26 @@ struct MapHomeView: View {
                             .weight(.bold)
                             )
                             .foregroundColor(.white))
-                        
-                        
                     }
-                Button {
-                    } label: {
-                        Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 350, height: 98)
-                        .background(Color(red: 0.93, green: 0.6, blue: 0.45))
-                        .cornerRadius(56)
-                        .overlay(Text("Search Map")
-                            .font(
-                            Font.custom("Fredoka", size: 32)
+                
+              
+                NavigationLink(destination: TinyMapSlideUpView(), label: {
+                    
+                
+                    Text("Seach Map")
+                })
+                .foregroundColor(.clear)
+                .frame(width: 350, height: 98)
+                .background(Color(red: 0.93, green: 0.6, blue: 0.45))
+                .cornerRadius(56)
+                .overlay(Text("Search Map")
+                    .font(
+                        Font.custom("Fredoka", size: 32)
                             .weight(.bold)
-                            )
-                            .foregroundColor(.white))
-                    }
+                    )
+                        .foregroundColor(.white))
+                    
+                
             }
             .offset(CGSize(width:0, height: 200))
           
@@ -64,49 +67,8 @@ struct MapHomeView: View {
                 
                 Image("Ellipse 2")
                     .offset(CGSize(width:0, height: -90))
-                
-                
-                
-//                ZStack{
-//                    Rectangle()
-//                        .foregroundColor(.clear)
-//                        .frame(width: 390, height: 125)
-//                        .background(Color(red: 0.13, green: 0.32, blue: 0.41))
-//                        .cornerRadius(33)
-//                 
-//                    VStack(){
-//                        HStack(spacing: 40){
-//                            Button {
-//                                    
-//                            } label: {
-//                                Image("Vector 11")
-//                            }
-//                            Button {
-//                                    
-//                            } label: {
-//                                Image("Vector 2")
-//                            }
-//                            Button {
-//                                    
-//                            } label: {
-//                                Image("profileicon")
-//                            }
-//                        }
-//                        
-//                        HStack(spacing: 50){
-//                            Text("activity")
-//                            Text("map")
-//                            Text("profile")
-//                        }
-//                        .font(Font.custom("Fredoka", size: 20)
-//                        .weight(.bold))
-//                        .foregroundColor(.white)
-//                    }
-//                }
-//                .padding([.top], 400)
+
             }
-            
-           
             
         }
         .frame(width: 390, height: 844)
