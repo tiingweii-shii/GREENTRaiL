@@ -13,8 +13,44 @@ struct MapHomeView: View {
                 .offset(CGSize(width:0, height: 200))
             
             Image("Vector 12")
-                .offset(CGSize(width:20, height: 103))
-            
+                .offset(CGSize(width:20, height: 153))
+            VStack{
+                
+                Button {
+
+                    } label: {
+                        Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 350, height: 98)
+                        .background(Color(red: 1, green: 0.71, blue: 0.07))
+                        .cornerRadius(56)
+                        .overlay(Text("Recommend Route")
+                            .font(
+                            Font.custom("Fredoka", size: 32)
+                            .weight(.bold)
+                            )
+                            .foregroundColor(.white))
+                        
+                        
+                    }
+                Button {
+                    } label: {
+                        Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 350, height: 98)
+                        .background(Color(red: 0.93, green: 0.6, blue: 0.45))
+                        .cornerRadius(56)
+                        .overlay(Text("Search Map")
+                            .font(
+                            Font.custom("Fredoka", size: 32)
+                            .weight(.bold)
+                            )
+                            .foregroundColor(.white))
+                    }
+            }
+            .offset(CGSize(width:0, height: 200))
+          
+
             VStack{
                 Text("greentr       l ")
                 .font(
@@ -24,9 +60,11 @@ struct MapHomeView: View {
                 .foregroundColor(.white)
 
                 .frame(width: 200, height: 26, alignment: .topLeading)
-                .offset(CGSize(width:0, height: -103))
+                .offset(CGSize(width:0, height: -240))
                 
                 Image("Ellipse 2")
+                    .offset(CGSize(width:0, height: -90))
+                
                 
                 
 //                ZStack{
@@ -67,7 +105,7 @@ struct MapHomeView: View {
 //                }
 //                .padding([.top], 400)
             }
-            .offset(CGSize(width: 0, height: 125))
+            
            
             
         }
@@ -82,13 +120,6 @@ struct MapHomeView: View {
                 endPoint: UnitPoint(x: 0.5, y: 0.75)
             )
         )
-        
-        
-
-            
-            
-            //.padding([.top], 720)
-   
         
     }
 }
