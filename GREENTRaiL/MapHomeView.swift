@@ -2,7 +2,7 @@ import SwiftUI
 
 struct MapHomeView: View {
     var body: some View {
-        NavigationView {
+        
             ZStack{
                 
                 Image("APP BRAND WHITE")
@@ -68,7 +68,7 @@ struct MapHomeView: View {
             )
             
             }
-        }
+        
 }
 
 struct MapHomeView_Previews: PreviewProvider {
