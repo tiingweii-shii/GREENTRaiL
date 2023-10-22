@@ -48,9 +48,13 @@ struct TinyMapSlideUpView: View {
         // center them inside the bar
         
     }
-    struct ContentView_Previews: PreviewProvider {
+    /*struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
         }
-    }
+    }*/
+}
+
+#Preview {
+    TinyMapSlideUpView()
 }
