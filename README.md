@@ -1,4 +1,6 @@
 # GREENTRaiL
+<img src="/media/UI.png" alt="UI">
+<img src="/media/solution.png" alt="Info">
 
 ## Inspiration
 Hiking has exploded in popularity since the pandemic with more than 80 million Americans hiking in 2022 alone. There are many large mental and physical health benefits to hiking, however it can be daunting to select routes as a beginner. It is difficult to imagine how a route would feel before going on it, especially for those without past input.
@@ -26,6 +28,9 @@ Future areas of development include syncing with other nature apps such as iNatu
 
 ## Figma Design 
 https://www.figma.com/file/S9wlv984UYBPaX8IiPqRJe/greentrAIl?type=design&node-id=2%3A87&mode=design&t=mIexhgpxiinAegGd-1
+
+<img src="/media/title.png" alt="Banner">
+
 
 ## Technologies Used
 
