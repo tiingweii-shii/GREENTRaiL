@@ -130,11 +130,6 @@ struct ProfileView: View {
                                     .stroke(.white, lineWidth: 5)
                                     .frame(width: 350, height: 60)
                             )
-                        .navigationDestination(for: String.self) { view in
-                            if view == "NewView" {
-                                Text("This is NewView")
-                            }
-                        }
                     }.padding(20)
                     
                 }
