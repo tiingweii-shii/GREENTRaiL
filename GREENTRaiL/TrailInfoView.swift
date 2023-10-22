@@ -88,6 +88,6 @@ struct TrailInfoView: View {
 
 struct TrailInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        TrailInfo()
+        TrailInfoView()
     }
 }
