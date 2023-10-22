@@ -16,7 +16,7 @@ struct MapHomeView: View {
                     .offset(CGSize(width:20, height: 153))
                 VStack{
                     
-                    NavigationLink (destination: TrailInfoView(), label: {
+                    NavigationLink (destination: TinyMapSlideUpViewRecomended(), label: {
                         Text("Recommend Route")                              .foregroundColor(Color.white)
                             .font(Font.custom("Fredoka-Bold", size: 32))
                             .frame(width: 350, height: 98)
