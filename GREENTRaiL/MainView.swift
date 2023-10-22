@@ -28,20 +28,28 @@ struct MainView: View {
         }
     }
     
+    @State private var selection = 2
     
     var body: some View {
-        TabView{
-            MapHomeView()
-                .tabItem { Label("Map", image: "map_nav") }
+        TabView(selection:$selection){
+            ActivityView()
+                .tabItem { 
+                    Image("activity_nav")
+                }
+                .tag(1)
             
-            LogInView()
-                .tabItem { Label("Activity", image:"activity_nav")}
+            MapHomeView()
+                .tabItem {
+                    Image("map_nav") }
+                .tag(2)
                     
-            ContentView()
-                .tabItem { Label("Profile", image:"profile_nav")}
+            ProfileView()
+                .tabItem { Image("profile_nav")}
+                .tag(3)
         }
         .onAppear() {
-                    UITabBar.appearance().backgroundColor = UIColor(Color(red: 0.13, green: 0.32, blue: 0.41))
+                    UITabBar.appearance()
+                .backgroundColor = UIColor(Color(red: 0.13, green: 0.32, blue: 0.41))
                 }
         
     }
