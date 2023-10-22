@@ -29,46 +29,43 @@ struct MapHomeView: View {
                 Image("Ellipse 2")
                 
                 
-                ZStack{
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 390, height: 125)
-                        .background(Color(red: 0.13, green: 0.32, blue: 0.41))
-                        .cornerRadius(33)
-                 
-                    VStack(){
-                        HStack(spacing: 40){
-                            Button {
-                                    
-                            } label: {
-                                Image("Vector 11")
-
-                            }
-                            Button {
-                                    
-                            } label: {
-                                Image("Vector 2")
-
-                            }
-                            Button {
-                                    
-                            } label: {
-                                Image("profileicon")
-
-                            }
-                        }
-                        
-                        HStack(spacing: 50){
-                            Text("activity")
-                            Text("map")
-                            Text("profile")
-                        }
-                        .font(Font.custom("Fredoka", size: 20)
-                        .weight(.bold))
-                        .foregroundColor(.white)
-                    }
-                }
-                .padding([.top], 400)
+//                ZStack{
+//                    Rectangle()
+//                        .foregroundColor(.clear)
+//                        .frame(width: 390, height: 125)
+//                        .background(Color(red: 0.13, green: 0.32, blue: 0.41))
+//                        .cornerRadius(33)
+//                 
+//                    VStack(){
+//                        HStack(spacing: 40){
+//                            Button {
+//                                    
+//                            } label: {
+//                                Image("Vector 11")
+//                            }
+//                            Button {
+//                                    
+//                            } label: {
+//                                Image("Vector 2")
+//                            }
+//                            Button {
+//                                    
+//                            } label: {
+//                                Image("profileicon")
+//                            }
+//                        }
+//                        
+//                        HStack(spacing: 50){
+//                            Text("activity")
+//                            Text("map")
+//                            Text("profile")
+//                        }
+//                        .font(Font.custom("Fredoka", size: 20)
+//                        .weight(.bold))
+//                        .foregroundColor(.white)
+//                    }
+//                }
+//                .padding([.top], 400)
             }
             .offset(CGSize(width: 0, height: 125))
            
