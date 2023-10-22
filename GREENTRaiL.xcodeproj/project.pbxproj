@@ -10,6 +10,7 @@
 		081348A72AE47E4700699C84 /* GREENTRaiLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081348A62AE47E4700699C84 /* GREENTRaiLModel.swift */; };
 		081529FF2AE419320039AE8F /* TerraiOS in Frameworks */ = {isa = PBXBuildFile; productRef = 081529FE2AE419320039AE8F /* TerraiOS */; };
 		08F5C4782AE48B18006BDECE /* TinyMapSlideUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F5C4772AE48B18006BDECE /* TinyMapSlideUpView.swift */; };
+		5C3052F22AE49D1200998BCB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C3052F12AE49D1200998BCB /* GoogleService-Info.plist */; };
 		5CC4765B2AE41D0F00FF2510 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5CC4765A2AE41D0F00FF2510 /* FirebaseAnalytics */; };
 		5CC4765D2AE41D0F00FF2510 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 5CC4765C2AE41D0F00FF2510 /* FirebaseAnalyticsOnDeviceConversion */; };
 		5CC4765F2AE41D0F00FF2510 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5CC4765E2AE41D0F00FF2510 /* FirebaseAnalyticsSwift */; };
@@ -55,13 +56,13 @@
 		08152A002AE419640039AE8F /* GREENTRaiL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GREENTRaiL.entitlements; sourceTree = "<group>"; };
 		08152A012AE419720039AE8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		08F5C4772AE48B18006BDECE /* TinyMapSlideUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyMapSlideUpView.swift; sourceTree = "<group>"; };
+		5C3052F12AE49D1200998BCB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5CC476982AE45F6800FF2510 /* WidgetHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHandler.swift; sourceTree = "<group>"; };
 		5CC4769A2AE45F8E00FF2510 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		5CC4769C2AE4605C00FF2510 /* WidgetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetInfo.swift; sourceTree = "<group>"; };
 		5CC4769E2AE460DD00FF2510 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		5CC476A02AE4698C00FF2510 /* MapHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapHomeView.swift; sourceTree = "<group>"; };
 		D81C10912AE48D6A006461DA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		D81C10932AE4950A006461DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D824AF842AE430540042148A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		D824AF882AE4387A0042148A /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		D8C07DD82AE417AB0069EF0C /* GREENTRaiL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREENTRaiL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,8 +129,8 @@
 		D8C07DDA2AE417AB0069EF0C /* GREENTRaiL */ = {
 			isa = PBXGroup;
 			children = (
+				5C3052F12AE49D1200998BCB /* GoogleService-Info.plist */,
 				D824AF882AE4387A0042148A /* Fonts */,
-				D81C10932AE4950A006461DA /* GoogleService-Info.plist */,
 				08152A012AE419720039AE8F /* Info.plist */,
 				08152A002AE419640039AE8F /* GREENTRaiL.entitlements */,
 				5CC476A02AE4698C00FF2510 /* MapHomeView.swift */,
@@ -250,6 +251,7 @@
 			files = (
 				D8C07DE32AE417B10069EF0C /* Preview Assets.xcassets in Resources */,
 				D824AF892AE4387A0042148A /* Fonts in Resources */,
+				5C3052F22AE49D1200998BCB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
