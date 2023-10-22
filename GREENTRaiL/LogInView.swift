@@ -34,11 +34,7 @@ struct LogInView: View {
                             }
                         }
                         
-                        /*getTrails() { hikes in
-                            for hike in hikes {
-                                print(hike)
-                            }
-                        }*/
+                       
                     }, label: {
                         Text("LOGIN")
                             .foregroundColor(Color.white)
