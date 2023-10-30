@@ -8,25 +8,7 @@
 import SwiftUI
 import TerraiOS
 
-struct MainView: View {
-    
-    var widgetHandler = WidgetHandler()
-    
-    static public var terraManager: TerraManager? = nil
-    
-    @State var path: [String] = []
-    
-    public static var userId: String? = nil
-    public static var resource: String? = nil
-    
-    init() {
-        Terra.instance(devId: DEVID, referenceId: "TonyStarks") { manager, error in
-            ContentView.terraManager = manager
-            if let error = error{
-                print(error)
-            }
-        }
-    }
+struct MainMenuView: View {
     
     @State private var selection = 2
     
@@ -56,5 +38,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView()
+    MainMenuView()
 }

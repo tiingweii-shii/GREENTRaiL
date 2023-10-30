@@ -9,7 +9,7 @@ struct MapHomeView: View {
                     .frame(width: 42, height: 35.46667)
                     .offset(CGSize(width:25, height: -270))
                 
-                Image("Vector 3")
+                Image("background_vector_white")
                     .offset(CGSize(width:0, height: 200))
                 
                 Image("Vector 12")

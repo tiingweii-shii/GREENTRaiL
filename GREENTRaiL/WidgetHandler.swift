@@ -146,13 +146,13 @@ class WidgetHandler: NSObject, ObservableObject, ASWebAuthenticationPresentation
         if queries.first(where: { queryItem in
             queryItem.name == "resource"
         })?.value == "APPLE"{
-            ContentView.terraManager?.initConnection(type: .APPLE_HEALTH, token: WidgetHandler.generateAuthToken() ?? ""){success, error in
+            LogInView.terraManager?.initConnection(type: .APPLE_HEALTH, token: WidgetHandler.generateAuthToken() ?? ""){success, error in
                 if let error = error{
                     print(error)
                     completion(success, nil, nil)
                     return
                 }
-                completion(success, (ContentView.terraManager?.getUserId(type: .APPLE_HEALTH))!, "APPLE")
+                completion(success, (LogInView.terraManager?.getUserId(type: .APPLE_HEALTH))!, "APPLE")
             }
             
         }

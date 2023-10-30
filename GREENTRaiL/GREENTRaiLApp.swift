@@ -200,14 +200,14 @@ func getUsers(name: String, completion: @escaping (user) -> Void) {
 
 func requestActivity(startDate: Date, endDate: Date, resource: String, completion:@escaping(workout)->Void){
     
-    let client = TerraClient(userId: ContentView.userId!, devId: DEVID, xAPIKey: XAPIKEY)
+    let client = TerraClient(userId: LogInView.userId!, devId: DEVID, xAPIKey: XAPIKEY)
     
     var rec = workout(max_bpm: 0, startTime: "", endTime: "")
     
     let formatter = ISO8601DateFormatter()
     
     if (resource == "APPLE"){
-        ContentView.terraManager?.getActivity(type: .APPLE_HEALTH, startDate: startDate, endDate: endDate, toWebhook: false){success,data,error in
+        LogInView.terraManager?.getActivity(type: .APPLE_HEALTH, startDate: startDate, endDate: endDate, toWebhook: false){success,data,error in
             let lastActivity = data?.data?.last
             rec.max_bpm = Int((lastActivity?.heart_rate_data?.summary?.max_hr_bpm)!)
             rec.startTime = (lastActivity?.metadata?.start_time)!
@@ -354,7 +354,7 @@ func update_difficulty(trail: String){
 func new_hike(act:workout, trail: String){
     let collectionRef = Firestore.firestore().collection("hikes")
     
-    var newHike = hike(bpm: [act.max_bpm], distance: [0], duration: 0, elevation: [0], name: ContentView.userId!, time: [0], trail: trail)
+    var newHike = hike(bpm: [act.max_bpm], distance: [0], duration: 0, elevation: [0], name: LogInView.userId!, time: [0], trail: trail)
     
     do {
         let data = try JSONEncoder().encode(newHike)
