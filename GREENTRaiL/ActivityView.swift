@@ -11,6 +11,7 @@ struct ActivityView: View {
     
     @State private var label_string = "Get Activity"
     @State private var route_label = "Select Route"
+    @EnvironmentObject var appController: AppController
     
     var body: some View {
         
@@ -53,7 +54,7 @@ struct ActivityView: View {
                     let formatter = DateFormatter()
                     formatter.dateFormat = "yyyy/MM/dd HH:mm"
                     let start = formatter.date(from: "2023/10/11 22:31")
-                    requestActivity(startDate: start!, endDate: end, resource:LogInView.resource!) { w in
+                    appController.requestActivity(startDate: start!, endDate: end, resource:"APPLE") { w in
                         
                         let originalString = w.startTime
                         let startIndex = originalString.index(originalString.startIndex, offsetBy: 0) // Index where the slice starts

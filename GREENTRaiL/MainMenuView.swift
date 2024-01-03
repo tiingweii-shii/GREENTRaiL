@@ -10,6 +10,8 @@ import TerraiOS
 
 struct MainMenuView: View {
     
+    @EnvironmentObject var appController: AppController
+    
     @State private var selection = 2
     
     var body: some View {
@@ -28,6 +30,7 @@ struct MainMenuView: View {
             ProfileView()
                 .tabItem { Image("profile_nav")}
                 .tag(3)
+                .environmentObject(appController)
         }
         .onAppear() {
                     UITabBar.appearance()

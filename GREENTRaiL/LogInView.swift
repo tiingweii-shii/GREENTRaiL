@@ -12,13 +12,18 @@ struct LogInView: View {
     
     var widgetHandler = WidgetHandler()
     @State private var loggedIn = false
+    @State private var email: String = ""
+    @State private var password: String = ""
         
     static public var terraManager: TerraManager? = nil
     
-    @State var path: [String] = []
+    @State private var navigateToMain = false
     
-    public static var userId: String? = nil
-    public static var resource: String? = nil
+    // @State var path: [String] = []
+    
+    // public static var userId: String? = nil
+    // public static var resource: String? = nil
+    @EnvironmentObject var appController: AppController // UserController injected as an environment object
     
     init() {
         Terra.instance(devId: DEVID, referenceId: "TonyStarks") { manager, error in
@@ -46,7 +51,20 @@ struct LogInView: View {
                 VStack {
                     Image("home_logo")
                         .padding([.top], 200)
+                    
+                    TextField("Email", text: $email)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                        .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
+                        .cornerRadius(50)
+                    
+                    SecureField("Password", text: $password)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                        .cornerRadius(50)
                     loginButton
+                    registerButton
                     textLogo
                     exploreSlogan
                 }
@@ -60,22 +78,30 @@ struct LogInView: View {
     
     var loginButton: some View {
         Button(action: {
-            widgetHandler.displayWidget { success, _userId, _resource  in
-                if success {
-                    LogInView.userId = _userId
-                    LogInView.resource = _resource
-                    
-                    getUsers(name:LogInView.userId!) { user in
-                        print(user)
+            // Action for the login button
+            appController.login(email: email, password: password) { result in
+                DispatchQueue.main.async {
+                    switch result {
+                        case .success(_):
+                            loggedIn = true
+                            print("Login Successful!")
+                            print(appController.isAuthenticated)
+                        case .failure(let error):
+                            print("Login failed with error: \(error.localizedDescription)")
+                            // Handle error or update UI
+                        }
                     }
-                    
-                    loggedIn = true
-                    print(loggedIn)
                 }
             }
-        }, label: {
+               , label: {
             loginButtonLabel
         }).padding([.top], 15)
+    }
+    
+    var registerButton: some View {
+        NavigationLink(destination: {RegistrationView().environmentObject(appController)}, label: {
+            registerButtonLabel
+        }).padding([.top], 40)
     }
     
     var loginButtonLabel: some View {
@@ -83,6 +109,19 @@ struct LogInView: View {
             .foregroundColor(Color.white)
             .font(Font.custom("Fredoka-Bold", size: 40))
             .frame(width: 122, height: 40, alignment: .topLeading)
+            .background(
+                Rectangle()
+                    .fill(brown)
+                    .cornerRadius(50)
+                    .frame(width: 305, height: 72)
+            )
+    }
+    
+    var registerButtonLabel: some View {
+        Text("REGISTER")
+            .foregroundColor(Color.white)
+            .font(Font.custom("Fredoka-Bold", size: 40))
+            .frame(width: 185, height: 40, alignment: .topLeading)
             .background(
                 Rectangle()
                     .fill(brown)
@@ -114,12 +153,12 @@ struct LogInView: View {
     }
     
     var navigation: some View {
-        NavigationLink(destination: MainMenuView(), isActive: $loggedIn) {
+        NavigationLink(destination: MainMenuView().environmentObject(appController), isActive: $loggedIn) {
             EmptyView() // This view will remain empty
         }.isDetailLink(false)
     }
 }
 
 #Preview {
-    LogInView()
+    LogInView().environmentObject(AppController())
 }

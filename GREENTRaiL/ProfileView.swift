@@ -18,6 +18,9 @@ struct profileInfo {
 var profile = profileInfo(userId: "12345", name: "Greeny", age: "10", height: "5'9\"", weight: "140 lb")
 
 struct ProfileView: View {
+    
+    @EnvironmentObject var appController: AppController
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -41,24 +44,24 @@ struct ProfileView: View {
                             .frame(width: 105, height: 33, alignment: .topLeading)
                         VStack(spacing: 5) {
                             HStack {
-                                Text("UserID:")
-                                Text(profile.userId)
+                                Text("Email:")
+                                Text(appController.currentUser!.email)
                             }
                             HStack {
                                 Text("Name:")
-                                Text(profile.name)
+                                Text(appController.currentUser!.firstName)
                             }
                             HStack {
                                 Text("Age:")
-                                Text(profile.age)
+                                Text("\(appController.currentUser!.age)")
                             }
                             HStack {
                                 Text("Height:")
-                                Text(profile.height)
+                                Text("\(appController.currentUser!.height)")
                             }
                             HStack {
                                 Text("Weight:")
-                                Text(profile.height)
+                                Text("\(appController.currentUser!.weight)")
                             }
                         }
                         .font(
